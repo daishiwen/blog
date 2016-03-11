@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html>
-
-  {% include head.html %}
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#082">
+{%  if page.url == "/index.html" and page.tagline != null %}
+    <title>{{ site.title }} :: {{ page.tagline }}</title>
+{%  else %}
+    <title>{{ page.title }} :: {{ site.title }}</title>
+{%  endif %}
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
   <body>
+    <header class="site-header">
+      <div class="brand"><a href="/">{{ site.title }}</a></div>
+      <nav>
+        <ul>
+{% for node in site.pages %}{% if node.title != null and node.group == 'navigation' %}{% if node.categories and page.categories %}
+          <li class="active">
+            <a href="{{ node.url }}">{{ node.title }}</a>
+            <ul>{% for category in site.categories %}
+              <li{% if page.categories.first == category[0] %} class="active"{% endif %}><a href="{{ node.url }}#{{ category[0] }}">{{ category[0] }}</a></li>{% endfor %}
+            </ul>
+          </li>
+{% else %}
+          <li{% if page.url == node.url %} class="active"{% endif %}><a href="{{ node.url }}">{{ node.title }}</a></li>
+{% endif %}{% endif %}{% endfor %}
+        </ul>
+      </nav>
+    </header>
 
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+    <div class="site-wrapper">
+{{ content }}
     </div>
 
-    {% include footer.html %}
+    <footer class="site-footer">
+      <p>Designed by <a href="http://xingrz.me">XiNGRZ</a>. Proudly built with <a href="http://jekyllrb.com/">Jekyll</a> and hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
+    </footer>
 
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{{ site.google_tracking_id }}', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
-
 </html>
