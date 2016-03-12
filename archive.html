@@ -10,7 +10,7 @@ group: navigation
 {% capture next_year %}{{ post.previous.date | date: "%Y" }} 年{% endcapture %}
 {% capture next_month %}{{ post.previous.date | date: "%m" }} 月{% endcapture %}
 {% if forloop.first %}
-          <h2>{{ this_year }}</h2>
+          <h2><time>{{ this_year }}</time></h2>
           <h4>{{ this_month }}</h4>
           <ul>
 {% endif %}
@@ -22,7 +22,7 @@ group: navigation
           </ul>
 {% elsif this_year != next_year %}
           </ul>
-          <h2>{{ next_year }}</h2>
+          <h2><time>{{ next_year }}</time></h2>
           <h4>{{ next_month }}</h4>
           <ul>
 {% elsif this_month != next_month %}

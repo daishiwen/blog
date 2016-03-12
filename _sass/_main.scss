@@ -31,6 +31,10 @@ sub, sup {
   font-size: 50%;
 }
 
+time {
+  font-family: Georgia,serif;
+}
+
 /**
  * Site Header
  */
@@ -40,6 +44,8 @@ sub, sup {
   left: 50px;
   top: 0;
   width: 250px;
+  font-family: "Comic Sans MS",cursive,sans-serif;
+  font-weight: bold;
 }
 
 .site-header a {
@@ -74,6 +80,8 @@ sub, sup {
   line-height: 7ex;
   color: #777;
   transition: background-color 500ms;
+  font-family: $san-serif;
+  font-weight: normal;
 }
 
 .site-header nav ul > li.active {
