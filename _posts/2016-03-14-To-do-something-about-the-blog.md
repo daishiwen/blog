@@ -3,7 +3,6 @@ layout: post
 category: 阿西巴
 tags: [TODO]
 title: 博客的待办事项
-description: 博客的待办事项
 ---
 
 > 周日晚上写于沙发
