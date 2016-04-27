@@ -2,10 +2,10 @@
 layout: post
 category: journey
 tags: [journey]
-title: 迷失东京
+title: Lost in Tokyo「迷失东京」
 ---
 
-![]({{site.url}}/images/trip_tokyo_night_view2.jpg)
+![]({{site.url}}/images/trip_tokyo_night_view4.jpg)
 
 > 之所以想到用「迷失东京」做为标题，是因为脑子里突然冒出来了这个词。
 
@@ -16,10 +16,13 @@ title: 迷失东京
 好吧，具体情节我已经忘了，只记得讲的是一个老男人和一个年轻女人的故事。
 
 男主角—过气电视明星鲍勃·哈里斯（比尔·默瑞 Bill Murray 饰）<br/>
-![](https://img1.doubanio.com/view/photo/photo/public/p2212681619.jpg)
+![]({{site.url}}/images/p2212681619.jpg)
 
 女主角—已为人妻的夏洛特（斯嘉丽·约翰逊 Scarlett Johansson 饰）<br/>
-![](https://img1.doubanio.com/view/photo/photo/public/p2152618469.jpg)
+![]({{site.url}}/images/p2152618469.jpg)
+
+结尾一幕，I love you, just like honey...<br/>
+![]({{site.url}}/images/p492722246.jpg)
 
 日本不是第一次去了，之前去过一次冲绳。冲绳给人的感觉是：嗯，这里是日本；嗯？这里是日本吗？
 这次去了东京才真真切切的感受到了日本的感觉。
@@ -39,13 +42,20 @@ title: 迷失东京
 > 在东京的第一餐吃的拉面，人民币50左右，味道还可以
 >
 
-东京塔 Tokyo Tower<br/>
-![]({{site.url}}/images/trip_tokyo_tower.jpg)
-
-歌舞伎厅一番街<br/>
+歌舞伎町一番街<br/>
 ![]({{site.url}}/images/trip_tokyo_night_view3.jpg)
 
+歌舞伎町<br/>
+![]({{site.url}}/images/trip_tokyo_night_view2.jpg)
+
+车水马龙<br/>
 ![]({{site.url}}/images/trip_tokyo_night_view1.jpg)
+
+深夜食堂<br/>
+![]({{site.url}}/images/trip_tokyo_night_view5.jpg)
+
+东京塔 Tokyo Tower<br/>
+![]({{site.url}}/images/trip_tokyo_tower2.jpg)
 
 ## 写在最后
 
