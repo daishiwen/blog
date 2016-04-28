@@ -8,6 +8,7 @@ html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   color: #556;
+  background-image: url({{site.url}}/images/noisy_texture_section0-200x200.png);
 }
 
 a, a:visited {
@@ -113,7 +114,6 @@ time {
 }
 
 .site-wrapper {
-  background: #FCFCFC;
   padding: 20px 50px 100px 350px;
 }
 

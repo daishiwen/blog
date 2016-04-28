@@ -11,9 +11,8 @@ title: 白色情人节
 
 效果如图：
 
-![]({{site.url}}/images/vim_markdown_sample1.png)
+![]({{site.url}}/images/vim_markdown_sample1.jpg)
 
-![]({{site.url}}/images/vim_markdown_sample2.png)
+![]({{site.url}}/images/vim_markdown_sample2.jpg)
 
 至于具体配置细节，等有时间了补上，现在是真忙...5555555...
-
