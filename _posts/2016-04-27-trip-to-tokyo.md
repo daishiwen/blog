@@ -1,7 +1,7 @@
 ---
 layout: post
-category: journey
-tags: [journey]
+category: Journey
+tags: [Journey]
 title: Lost in Tokyo「迷失东京」
 ---
 
