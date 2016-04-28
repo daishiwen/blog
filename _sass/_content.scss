@@ -128,6 +128,24 @@
       }
     }
 
+	doublequote {
+      font-size: 0.9rem;
+      padding-left: 1.6em;
+      padding-right: 2em;
+      color: #777;
+
+      * {
+        font-size: 1em;
+      }
+
+      p {
+        margin-top: 0;
+        margin-bottom: 25px;
+		margin-left: 50px;
+        line-height: 1.8;
+      }
+    }
+
     img {
       max-width: 60%;
     }
