@@ -1,14 +1,15 @@
 .site-footer {
   margin: 0;
-  padding: 20px 50px 20px 50px;
-  border-top: 1px solid #EEE;
   text-align: right;
+  padding: 0.9rem;
+  box-shadow: 0 0 3px #DDD;
 
   p {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: #777;
     margin: 5px;
     padding: 0;
+	line-height: normal;
   }
 
   @media (max-width: 1080px) {

@@ -9,7 +9,51 @@ $san-serif: 'Open Sans', Arial, 'PingFang SC', 'Lantinghei SC',
 
 $monospace: 'Ubuntu Mono', Consolas, 'Liberation Mono', Courier, monospace;
 
-$primary-color: #082;
+$ci-1: #334D5C;		// dark turquoise
+$ci-2: #45B29D;		// turquoise
+$ci-3: #EFC94C;		// yellow
+$ci-4: #E27A3F;		// orange
+$ci-5: #DF4949;		// red
+$ci-6: #A1D044;     // green
+
+$grey-1: #E4E4E4;
+$grey-2: #D7D7D7;
+$grey-3: #CBCBCB;
+$grey-4: #BEBEBE;
+$grey-5: #A4A4A4;
+$grey-6: #979797;
+$grey-7: #8B8B8B;
+$grey-8: #7E7E7E;
+$grey-9: #646464;
+$grey-10: #575757;
+$grey-11: #4B4B4B;
+$grey-12: #3E3E3E;
+$grey-13: #313131;
+$grey-14: #242424;
+$grey-15: #171717;
+$grey-16: #0B0B0B;
+
+$primary-accent-color: #F44336;
+$primary-color: $ci-1;
+$body-bg: #FFF !default;
+$footer-bg: $grey-8;
+$footer-color: #FFF;
+$footer-link-color: $ci-6;
+$subfooter-bg: $grey-13;
+$subfooter-color: $grey-8;
+$subfooter-link-color: $grey-8;
+
+$base-font-size: 16px;
+$font-size-p:    	$base-font-size;
+$font-size-h1:      2.441em;
+$font-size-h2:      1.953em;
+$font-size-h3:      1.563em;
+$font-size-h4:      1.25em;
+$font-size-h5:      1.152em;
+$font-size-small:   0.8em;
+$font-weight-bold: bold !default;
 
 @import "main",
         "syntax-highlighting";
+
+@import "styles_feeling_responsive";

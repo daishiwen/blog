@@ -1,3 +1,5 @@
+$width-sidebar: 16.66667%;
+
 html, body {
   margin: 0;
   padding: 0;
@@ -8,17 +10,17 @@ html {
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   color: #556;
-  background-image: url(../images/noisy_texture_section0-200x200.png);
 }
 
-a, a:visited {
-  color: $primary-color;
+a {
+  color: $primary-accent-color;
   text-decoration: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  transition: border-bottom-color 500ms;
+  transition-duration: 500ms;
 
   &:hover {
-    border-bottom-color: $primary-color;
+	color: $primary-accent-color;
+    border-bottom-color: $primary-accent-color;
   }
 }
 
@@ -42,11 +44,15 @@ time {
 
 .site-header {
   position: fixed;
-  left: 50px;
+  left: 0;
   top: 0;
-  width: 250px;
+  width: $width-sidebar;
+  height: 100%;
   font-family: "Comic Sans MS",cursive,sans-serif;
   font-weight: bold;
+  background-image: url(../images/backgroundPatternDark.png);
+  box-shadow: 0 0 5px #AAA;
+  z-index: 998;
 }
 
 .site-header a {
@@ -60,9 +66,10 @@ time {
 
 .site-header .brand > a {
   display: block;
-  padding: 0 40px;
+  padding: 0 60px;
   line-height: 100px;
   transition: color 500ms;
+  color: $primary-accent-color;
 }
 
 .site-header nav ul {
@@ -78,7 +85,7 @@ time {
 
 .site-header nav ul > li > a {
   display: block;
-  padding: 0 40px;
+  padding: 0 60px;
   line-height: 7ex;
   color: #777;
   transition: background-color 500ms;
@@ -87,18 +94,18 @@ time {
 }
 
 .site-header nav ul > li.active {
-  background: rgba(0, 0, 0, 0.02);
-  border-left: 5px solid $primary-color;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-left: 5px solid $primary-accent-color;
   margin-left: -5px;
 }
 
 .site-header nav ul > li.active > a {
-  color: $primary-color;
+  color: $primary-accent-color;
 }
 
 .site-header nav ul > li > a:hover {
-  background-color: rgba(0, 0, 0, 0.02);
-  color: $primary-color;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: $primary-accent-color;
 }
 
 .site-header nav ul > li > ul {
@@ -106,7 +113,7 @@ time {
 }
 
 .site-header nav ul > li > ul > li.active {
-  border-left: 5px solid darken($primary-color, 6%);
+  border-left: 5px solid darken($primary-accent-color, 6%);
 }
 
 .site-header nav ul > li > ul > li > a {
@@ -115,120 +122,66 @@ time {
 }
 
 .site-wrapper {
-  padding: 20px 50px 100px 350px;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px 5.58333% 100px 22.25%;
+  background-image: url(../images/backgroundPattern.png);
 }
 
 @media (max-width: 1080px) {
-  .site-header {
-    left: 0;
-    top: 0;
-    right: 0;
-    width: auto;
-    white-space: nowrap;
-    background: #FFF;
-    border-bottom: 5px solid #EEE;
-  }
-
-  .site-header .brand {
-    float: left;
-    width: 200px;
-    border-bottom: 5px solid $primary-color;
-    margin-bottom: -5px;
-  }
-
-  .site-header .brand > a {
-    padding: 0;
-    text-align: center;
-    line-height: 50px;
-  }
-
-  .site-header nav {
-    margin-left: 200px;
-  }
-
-  .site-header nav ul {
-    padding: 0;
-  }
-
-  .site-header nav ul > li {
-    display: inline-block;
-  }
-
-  .site-header nav ul > li.active {
-    border-left: none;
-    margin-left: 0;
-    border-bottom: 5px solid $primary-color;
-    margin-bottom: -5px;
-  }
-
-  .site-header nav ul > li > a {
-    display: inline-block;
-    padding: 0 30px;
-    line-height: 50px;
-  }
-
-  .site-header nav ul > li > ul {
-    background-color: rgba(0, 0, 0, 0.05);
-    display: inline-block;
-  }
-
-  .site-header nav ul > li > ul > li.active {
-    border-left: none;
-    border-bottom: 5px solid darken($primary-color, 6%);
-  }
-
-  .site-header nav ul > li > ul > li > a {
-    padding: 0 20px;
-    font-size: 1em;
-  }
-
-  .site-wrapper {
-    padding: 90px 50px 20px;
-  }
-}
-
-@media (max-width: 960px) {
-  .site-header .brand {
-    font-size: 1.2rem;
-    width: 120px;
-  }
-
-  .site-header nav {
-    margin-left: 120px;
-  }
-
-  .site-header nav ul > li > a {
-    padding: 0 20px;
-  }
-
-  .site-header nav ul > li > ul > li > a {
-    padding: 0 20px;
-  }
-
-  .site-wrapper {
-    padding: 90px 20px 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .site-header .brand {
-    overflow: hidden;
-    width: 55px;
-    background: $primary-color;
-  }
-
-  .site-header .brand > a {
-    width: 0;
-    padding-left: 55px;
-  }
-
-  .site-header nav {
-    margin-left: 55px;
-  }
-
-  .site-wrapper {
-    padding: 90px 10px 10px;
-  }
+	.site-header {
+		left: 0;
+		top: 0;
+		right: 0;
+		width: auto;
+		height: 33%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		background: url(../images/bg_header.svg) no-repeat fixed center center;
+		box-shadow: 0 0 5px #FF0000;
+	}
+	.site-header .brand {
+		width: 50%;
+		display: inline-block;
+	}
+	.site-header .brand > a {
+		width: auto;
+		display: inline;
+		color: rgba(255,255,255,0.87);
+	}
+	.site-header nav {
+		width: 50%;
+		margin-left: 50%;
+		margin-top: -85px;
+	}
+	.site-header nav ul {
+		padding: 0;
+	}
+	.site-header nav ul li {
+		width: 90%;
+	}
+	.site-header nav ul > li.active {
+		background-color: rgba(0, 0, 0, 0.08);
+		border-radius: 7px;
+		border-left: none;
+		margin-left: 0;
+	}
+	.site-header nav ul > li > a:hover {
+	  background-color: rgba(0, 0, 0, 0.04);
+	  border-radius: 7px;
+	  color: rgba(255,255,255,0.87);
+	}
+	.site-header nav ul > li.active > a {
+	  color: rgba(255,255,255,0.78);
+	}
+	.site-header nav ul li a {
+		line-height: 5ex;
+		color: rgba(255,255,255,0.78);
+		font-weight: bold;
+	}
+	.site-wrapper {
+		padding: 255px 5% 100px 5%;
+	}
 }
 
 
@@ -263,6 +216,7 @@ doublequote:before, .stressed-quote:before {
   margin: 0;
   font-size: 1.2rem;
   font-weight: normal;
+  line-height: normal;
 }
 
 .site-abstract > header h1 a {
@@ -272,7 +226,7 @@ doublequote:before, .stressed-quote:before {
 }
 
 .site-abstract > header h1 a:hover {
-  color: $primary-color;
+  color: $primary-accent-color;
 }
 
 .site-abstract > .abstract > :not(p) {
@@ -288,14 +242,23 @@ doublequote:before, .stressed-quote:before {
 }
 
 .site-abstract > footer {
-  margin-top: 10px;
+  margin-top: 16px;
   font-size: 0.8rem;
   color: #778;
 }
 
 .site-abstract > footer a {
+  color: $primary-accent-color;
   border-bottom: none;
+  &:hover {
+    color: $primary-accent-color;
+  }
 }
 
+// Selection Styles
+::selection {
+    background: $primary-accent-color;
+    color: #FFF;
+}
 
 @import "footer";

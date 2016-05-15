@@ -1,0 +1,22 @@
+// ---
+// # Only the main Sass file needs front matter, rest is included from site.sass.sass_dir
+// ---
+@charset "utf-8";
+
+@import "functions.scss";
+@import "03_settings_mixins_media_queries.scss";
+@import "04_settings_global.scss";
+@import "05_normalize.scss";
+
+@import "foundation-components/accordion";
+@import "foundation-components/block-grid";
+@import "foundation-components/button-groups";
+@import "foundation-components/clearing";
+@import "foundation-components/flex-video";
+@import "foundation-components/reveal";
+@import "foundation-components/thumbs";
+@import "foundation-components/type";
+
+@import "06_typography.scss";
+@import "07_layout.scss";
+@import "09_elements.scss";

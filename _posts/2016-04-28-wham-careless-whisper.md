@@ -1,8 +1,9 @@
 ---
 layout: post
-category: Music
-tags: [Music]
+category: Template
+tags: [Template - text]
 title: Wham - Careless Whisper
+header: no
 ---
 
 <doublequote>

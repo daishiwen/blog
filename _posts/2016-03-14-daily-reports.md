@@ -3,6 +3,7 @@ layout: post
 category: 日记
 tags: [日记]
 title: 白色情人节
+header: no
 ---
 
 今天是2016年3月14日，白色情人节。
@@ -11,8 +12,8 @@ title: 白色情人节
 
 效果如图：
 
-![]({{site.url}}/images/vim_markdown_sample1.jpg)
+<a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/vim_markdown_sample1.jpg)</a>
 
-![]({{site.url}}/images/vim_markdown_sample2.jpg)
+<a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/vim_markdown_sample2.jpg)</a>
 
 至于具体配置细节，等有时间了补上，现在是真忙...5555555...

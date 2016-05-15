@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#082">
+    <meta name="theme-color" content="#F44336">
 {%  if page.url == "/index.html" and page.tagline != null %}
     <title>{{ site.title }} :: {{ page.tagline }}</title>
 {%  else %}
     <title>{{ page.title }} :: {{ site.title }}</title>
 {%  endif %}
     <link rel="stylesheet" href="/css/main.css">
+
+	{% include _head.html %}
+
   </head>
   <body>
     <header class="site-header">
@@ -19,9 +22,9 @@
 {% for node in site.pages %}{% if node.title != null and node.group == 'navigation' %}{% if node.categories and page.categories %}
           <li class="active">
             <a href="{{ node.url }}">{{ node.title }}</a>
-            <ul>{% for category in site.categories %}
+            <!-- <ul>{% for category in site.categories %}
               <li{% if page.categories.first == category[0] %} class="active"{% endif %}><a href="{{ node.url }}#{{ category[0] }}">{{ category[0] }}</a></li>{% endfor %}
-            </ul>
+            </ul> -->
           </li>
 {% else %}
           <li{% if page.url == node.url %} class="active"{% endif %}><a href="{{ node.url }}">{{ node.title }}</a></li>
@@ -30,9 +33,15 @@
       </nav>
     </header>
 
-    <div class="site-wrapper">
-{{ content }}
-    </div>
+<div class="site-wrapper">
+	{{ content }}
+	<div id="videoModal" class="reveal-modal large" data-reveal="">
+	  <div class="flex-video widescreen vimeo" style="display: block;">
+		<img src=""/>
+	  </div>
+	  <a class="close-reveal-modal">&#215;</a>
+	</div>
+</div>
 
     <footer class="site-footer">
       <p>Designed by <a href="http://xingrz.me">XiNGRZ</a>. Proudly built with <a href="http://jekyllrb.com/">Jekyll</a> and hosted by <a href="https://pages.github.com/">GitHub Pages</a>.</p>
@@ -46,5 +55,8 @@
       ga('create', '{{ site.google_tracking_id }}', 'auto');
       ga('send', 'pageview');
     </script>
+
+	{% include _footer_scripts.html %}
+
   </body>
 </html>

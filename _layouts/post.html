@@ -3,17 +3,43 @@ layout: default
 ---
       <article class="site-content">
         <header>
+		  {% include _masthead.html %}
+		  {% if page.image.title %}
+  				<figure>
+  					<img src="{{ site.urlimg }}{{ page.image.title }}" width="970" alt="{{ page.title escape_once }}" itemprop="image">
+
+  					{% if page.image.caption_url && page.image.caption %}
+  					<div class="masthead-caption">
+  						<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+  					</div>
+  					{% elsif page.image.caption %}
+  					<div class="masthead-caption">
+  						{{ page.image.caption }}
+  					</div>
+  					{% endif %}
+  				</figure>
+  		    {% endif %}
+			<div itemprop="name">
+				{% if page.subheadline %}
+					<p class="subheadline">{{ page.subheadline }}</p>
+				{% endif %}
+			</div>
           <h1>{{ page.title }}</h1>
           <time pubdate datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y/%m/%d' }}</time>
           <ul class="tags">{% for tag in page.tags %}
             <li><a href="/tags.html#{{ tag }}">{{ tag }}</a></li>{% endfor %}
           </ul>
         </header>
+		{% if page.teaser %}
+			<p class="teaser" itemprop="description">
+				{{ page.teaser }}
+			</p>
+		{% endif %}
         <div class="content">
-{{ content }}
+			{{ content }}
         </div>
-        <footer>
-			<div id="disqus_thread"></div>
+<footer>
+	<div id="disqus_thread"></div>
 <script>
 /**
 * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
@@ -35,5 +61,5 @@ s.setAttribute('data-timestamp', + new Date());
 })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        </footer>
-      </article>
+</footer>
+</article>
