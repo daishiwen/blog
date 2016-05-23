@@ -1,7 +1,7 @@
 {% comment %}
-*   
+*
 *   More Information › https://mathiasbynens.be/notes/touch-icons
-*   
+*
 {% endcomment %}
 {% comment %} Regular Old-Skool Favicon: {% endcomment %}
 	{% if site.favicon-32x32 %}<link rel="icon" sizes="32x32" href="{{ site.url }}/assets/img/{{ site.favicon-32x32 }}">{% endif %}
@@ -25,6 +25,6 @@
 {% comment %} For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: {% endcomment %}
 	{% if site.apple-touch-icon-precomposed %}<link rel="apple-touch-icon-precomposed" href="{{ site.url }}/assets/img/{{ site.apple-touch-icon-precomposed }}">{% comment %} 57×57px {% endcomment %}	{% endif %}
 {% comment %} Favicon for Windows 8  {% endcomment %}
-	{% if site.msapplication_tileimage %}<meta name="msapplication-TileImage" content="{{ site.url }}/assets/img/{{ site.msapplication_tileimage }}">{% endif %}
+	{% if site.msapplication-TileImage %}<meta name="msapplication-TileImage" content="{{ site.url }}/assets/img/{{ site.msapplication-TileImage }}">{% endif %}
 {% comment %} Background Color for Tile for Windows 8  {% endcomment %}
-	{% if site.msapplication_tilecolor %}<meta name="msapplication-TileColor" content="{{ site.msapplication_tilecolor }}">{% endif %}
+	{% if site.msapplication-TileColor %}<meta name="msapplication-TileColor" content="{{ site.msapplication-TileColor }}">{% endif %}

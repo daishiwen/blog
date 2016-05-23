@@ -61,12 +61,11 @@ time {
 
 .site-header .brand {
   font-size: 1.8rem;
-  margin-left: -6px;
 }
 
 .site-header .brand > a {
   display: block;
-  padding: 0 60px;
+  padding: 0 48px;
   line-height: 100px;
   transition: color 500ms;
   color: $primary-accent-color;
