@@ -32,7 +32,26 @@
         </ul>
       </nav>
     </header>
-
+<div class="phone-header">
+	<div class="brand"><a href="/">{{ site.title }}</a></div>
+	<nav>
+	  <ul>
+{% for node in site.pages %}
+    {% if node.title != null and node.group == 'navigation' %}
+		{% if node.categories and page.categories %}
+		<li class="active">
+		  <a href="{{ node.url }}">{{ node.title }}</a>
+		</li>
+		{% else %}
+		<li {% if page.url == node.url %} class="active" {% endif %}>
+			<a href="{{ node.url }}">{{ node.title }}</a>
+		</li>
+		{% endif %}
+    {% endif %}
+{% endfor %}
+	  </ul>
+	</nav>
+</div>
 <div class="site-wrapper">
 	{{ content }}
 	<div id="videoModal" class="reveal-modal large" data-reveal="">

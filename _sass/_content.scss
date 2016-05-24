@@ -1,7 +1,7 @@
 .site-content {
   max-width: 800px;
   min-height: 60vh;
-  margin-left: 3%;
+  margin-left: 31px;
   margin-top: -20px;
 
   > header {
@@ -203,6 +203,7 @@
   @media (max-width: 1080px) {
     max-width: none;
 	margin-left: 0;
+	margin-top: 0;
 
     > .content {
       h2, h3, h4,
