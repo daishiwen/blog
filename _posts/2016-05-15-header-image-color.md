@@ -4,11 +4,9 @@ title:  "Header Image with Background Color"
 subheadline:  "Headers with Style"
 teaser: "Feeling Responsive allows you to use all kinds of headers. This example shows a header image with a defined background color via front matter."
 categories:
-    - Template
+    - 模板
 tags:
-    - design
-    - background color
-    - header
+    - Template - header
 header:
     image: header_unsplash_2-970x.jpg
     background-color:  "#304558"

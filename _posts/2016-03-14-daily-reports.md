@@ -1,6 +1,6 @@
 ---
 layout: post
-category: 日记
+category: 阿西巴
 tags: [日记]
 title: 白色情人节
 header: no

@@ -1,7 +1,7 @@
 ---
 layout: post
-category: Journey
-tags: [Journey]
+category: 旅行
+tags: [东京]
 title: Lost in Tokyo「迷失东京」
 header: no
 ---

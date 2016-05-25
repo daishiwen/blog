@@ -1,6 +1,6 @@
 ---
 layout: video
-category: Template
+category: 模板
 tags: [Template - video]
 title: Taylor Swift - Live in Las Vegas
 subheadline: "Templates"

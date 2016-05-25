@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Template
+category: 模板
 tags: [Template - image]
 title:  "Responsive Galleries with Foundation"
 header: no

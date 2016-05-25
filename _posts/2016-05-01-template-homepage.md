@@ -5,7 +5,7 @@
 # this work, you have to use › layout: frontpage
 #
 layout: frontpage
-category: Template
+category: 模板
 tags: [Template - homepage]
 header:
   image_fullwidth: unsplash_brooklyn-bridge_header.jpg

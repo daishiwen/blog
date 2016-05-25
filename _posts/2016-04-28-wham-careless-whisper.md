@@ -1,6 +1,6 @@
 ---
 layout: post
-category: Template
+category: 模板
 tags: [Template - text]
 title: Wham - Careless Whisper
 header: no

@@ -1,7 +1,7 @@
 ---
 layout: post
 category: 阿西巴
-tags: [TODO]
+tags: [日记]
 title: 博客的待办事项
 header: no
 ---
