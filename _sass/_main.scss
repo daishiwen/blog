@@ -150,6 +150,8 @@ time {
 		background: url(../images/bg_header.png);
 		box-shadow: 0 0 5px #FF0000;
 		float: left;
+		position: relative;
+		z-index: 999;
 	}
 	.site-wrapper {
 		padding: 200px 5% 10px 5%;
@@ -162,7 +164,6 @@ time {
 		color: rgba(255,255,255,0.87);
 		font-size: 1.8rem;
 		font-family: "Comic Sans MS",cursive,sans-serif;
-		// margin: 27px 48px;
 		margin-top: 27px;
 		margin-left: 48px;
 		border-bottom: none;
@@ -195,9 +196,12 @@ time {
 		padding-left: 20%;
 	}
 	.phone-header nav ul > li > a:hover {
-	  background-color: rgba(0, 0, 0, 0.04);
-	  border-radius: 4px;
-	  color: rgba(255,255,255,0.87);
+	    background-color: rgba(0, 0, 0, 0.04);
+	    border-radius: 4px;
+	    color: rgba(255,255,255,1);
+	}
+	.phone-header nav ul > li.active > a {
+	    color: rgba(255,255,255,1);
 	}
 	.phone-header nav ul > li.active {
 		background-color: rgba(0, 0, 0, 0.08);
@@ -205,61 +209,6 @@ time {
 		border-left: none;
 		margin-left: 0;
 	}
-
-
-	// .site-header {
-	// 	left: 0;
-	// 	top: 0;
-	// 	right: 0;
-	// 	width: auto;
-	// 	height: 33%;
-	// 	overflow-y: scroll;
-	// 	overflow-x: hidden;
-	// 	background: url(../images/bg_header.svg) no-repeat fixed center center;
-	// 	box-shadow: 0 0 5px #FF0000;
-	// }
-	// .site-header .brand {
-	// 	width: 50%;
-	// 	display: inline-block;
-	// }
-	// .site-header .brand > a {
-	// 	width: auto;
-	// 	display: inline;
-	// 	color: rgba(255,255,255,0.87);
-	// }
-	// .site-header nav {
-	// 	width: 50%;
-	// 	margin-left: 50%;
-	// 	margin-top: -85px;
-	// }
-	// .site-header nav ul {
-	// 	padding: 0;
-	// }
-	// .site-header nav ul li {
-	// 	width: 90%;
-	// }
-	// .site-header nav ul > li.active {
-	// 	background-color: rgba(0, 0, 0, 0.08);
-	// 	border-radius: 7px;
-	// 	border-left: none;
-	// 	margin-left: 0;
-	// }
-	// .site-header nav ul > li > a:hover {
-	//   background-color: rgba(0, 0, 0, 0.04);
-	//   border-radius: 7px;
-	//   color: rgba(255,255,255,0.87);
-	// }
-	// .site-header nav ul > li.active > a {
-	//   color: rgba(255,255,255,0.78);
-	// }
-	// .site-header nav ul li a {
-	// 	line-height: 5ex;
-	// 	color: rgba(255,255,255,0.78);
-	// 	font-weight: bold;
-	// }
-	// .site-wrapper {
-	// 	padding: 255px 5% 100px 5%;
-	// }
 }
 
 
