@@ -8,7 +8,7 @@
 # Site settings
 title: 'DAI'
 # The slogan describes your website and is used on homepage in <title> and other important places
-slogan: 'A Flexible Theme for Jekyll'
+slogan: 'slogan'
 # Logo size is 600x80 pixels
 logo: "logo.png"
 permalink: /:title.html
@@ -16,10 +16,7 @@ permalink: /:title.html
 exclude: [ ".gitignore", "README.md", "CNAME" ]
 
 email: daishiwen1212@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: "Java/Android/Emotion/Diary/Journey/Template, Welcome."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://daishiwen.github.io" # the base hostname & protocol for your site
 urlimg: "http://daishiwen.github.io/images/"
@@ -38,8 +35,10 @@ sass:
 #      / ____/___ __   __(_)________  ____  _____
 #     / /_  / __ `/ | / / / ___/ __ \/ __ \/ ___/
 #    / __/ / /_/ /| |/ / / /__/ /_/ / / / (__  )
-#   /_/    \__,_/ |___/_/\___/\____/_/ /_/____/   Favicon-Crap: Favicons, Chrome, Android & Apple Touch Buttons
-#                                                 More information » https://mathiasbynens.be/notes/touch-icons
+#   /_/    \__,_/ |___/_/\___/\____/_/ /_/____/
+#
+# Favicon-Crap: Favicons, Chrome, Android & Apple Touch Buttons
+# More information » https://mathiasbynens.be/notes/touch-icons
 
 favicon-32x32:                          'favicon-32x32.png'
 touch-icon-192x192:                     'touch-icon-192x192.png'
@@ -54,13 +53,25 @@ apple-touch-icon-precomposed:           'apple-touch-icon-precomposed.png'
 msapplication-TileImage:                'apple-touch-icon-144x144-precomposed.png' # Size 144x144
 msapplication-TileColor:                '#F44336'
 
+#        ____  _
+#       / __ \(_)________ ___  _______
+#      / / / / / ___/ __ `/ / / / ___/
+#     / /_/ / (__  ) /_/ / /_/ (__  )
+#    /_____/_/____/\__, /\__,_/____/
+#                    /_/
+#
+# used in _includes/_disqus.html
+
+disqus_shortname: daishiwen
+
 #       ___                __      __  _
 #      /   |  ____  ____ _/ /_  __/ /_(_)_________
 #     / /| | / __ \/ __ `/ / / / / __/ / ___/ ___/
 #    / ___ |/ / / / /_/ / / /_/ / /_/ / /__(__  )
-#   /_/  |_/_/ /_/\__,_/_/\__, /\__/_/\___/____/      https://www.google.com/analytics/
+#   /_/  |_/_/ /_/\__,_/_/\__, /\__/_/\___/____/
 #                        /____/
 #
-# used in _includes/footer_scripts
+# https://www.google.com/analytics/
+# used in _includes/_footer_scripts.html
 
 google_analytics_tracking_id: UA-78383065-1
