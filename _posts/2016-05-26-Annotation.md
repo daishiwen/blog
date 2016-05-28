@@ -33,8 +33,6 @@ public class Testable {
 可以看到，注解的定义看起来很像接口的定义。事实上，与其他任何Java接口一样，注解也将会编译成class文件。
 
 {% highlight java %}
-import java.lang.annotation.*;
-
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Test {
@@ -49,8 +47,6 @@ public @interface Test {
 下面看看有元素的注解：
 
 {% highlight java %}
-import java.lang.annotation.*;
-
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface UseCase {
@@ -62,8 +58,6 @@ public @interface UseCase {
 注意，id和description类似方法定义。description元素有一个default值，如果在注解某个方法时没有给出description的值，则该注解的处理器就会使用此元素的默认值。在下面的类中，有三个方法被注解：
 
 {% highlight java %}
-import java.util.List;
-
 public class PasswordUtils {
     @UseCase(id = 47, description = "Passwords must contain at least one numeric")
     public boolean validatePassword(String password) {
@@ -91,7 +85,6 @@ Java目前只内置了三种标准注解，以及四中元注解。元注解专�
 > ---
 > `@Target` 表示该注解可以用于什么地方。
 >
-> 可能的ElementType参数包括：<br>
 > `CONSTRUCTOR` 构造器的声明<br>
 > `FIELD` 域声明（包括enum实例）<br>
 > `LOCAL_VARIABLE` 局部变量声明<br>
@@ -125,11 +118,6 @@ Java目前只内置了三种标准注解，以及四中元注解。元注解专�
 下面是一个非常简单的注解处理器，我们将用它来读取PasswordUtils类，并使用反射机制查找`@UseCase`标记。
 
 {% highlight java %}
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class UseCaseTracker {
     public static void trackUseCases(List<Integer> useCases, Class<?> cl) {
         for (Method m : cl.getDeclaredMethods()) {
@@ -157,5 +145,176 @@ Output:
 Found Use Case: 47 Passwords must contain at least one numeric
 Found Use Case: 48 no description
 Found Use Case: 49 New passwords can't equal previously used ones
-Warning: Missing use case 50
+Warning: Missing use case-50
+```
+这个程序用到了两个反射方法：`getDeclaredMethods()`和`getAnnotation()`，它们都属于`AnnotationElement`接口（Class、Method与Field等类都实现了该接口）。`getAnnotation()`方法返回指定类型的注解对象，在这里就是UseCase。如果被注解的方法上没有该类型的注解，则返回null。然后我们通过调用`id()`和`description()`方法从返回的UseCase对象中提取元素的值。
+
+### 注解元素
+
+注解元素可用的类型如下所示：
+
+> 所有基本类型（int、float、boolean等）<br>
+> String<br>
+> Class<br>
+> enum<br>
+> Annotation<br>
+> 以上类型的数组<br>
+
+如果你使用了其他类型，那么编译器就会报错。注解也可以作为元素的类型，也就是说注解可以嵌套，这是一个很有用的技巧。
+
+### 默认值限制
+
+编译器对元素的默认值有些过分的挑剔。首先，元素不能有不确定的值。也就是说，元素必须要么具有默认值，要么在使用时提供元素的值。其次，对于非基本类型的元素，不论是在定义默认值时，或是在使用注解时，都不能以null作为其值。这个约束使得处理器很难表现一个元素的存在或缺失状态，为了绕开这个约束，我们只能自己定义一些特殊的值，例如空字符串或负数，以此表示某个元素不存在。
+
+### 生成外部文件（了解）
+
+假如你希望提供一些基本的对象/关系映射功能，能够自动生成数据库表，用以存储JavaBean对象。你可以选用XML描述文件，指明类的名字、每个成员以及数据库映射的相关信息。然而如果使用注解的话，你可以将所有信息保存在JavaBean源文件中。为此，我们需要一些新的注解，用以定义与Bean关联的数据库表的名字，以及与Bean属性关联的列的名字和SQL类型。
+
+以下是一个注解的定义，它告诉注解处理器，你需要为我生成一个数据库表：
+
+{% highlight java %}
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface DBTable {
+    String name() default "";
+}
+{% endhighlight %}
+
+在`@Target`注解中指定的每一个`ElementType`就是一个约束，它告诉编译器，这个自定义的注解只能应用于该类型。我们可以指定一个值或者以逗号分隔的形式指定多个值。如果想要将注解应用于所有的`ElementType`，可以省去`@Target`元注解，不过这并不常见。
+
+接下来是为修饰JavaBean域准备的注解：
+
+{% highlight java %}
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Constrains {
+    boolean primaryKey() default false;
+    boolean allowNull() default true;
+    boolean unique() default false;
+}
+{% endhighlight %}
+
+{% highlight java %}
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface SQLString {
+    int value() default 0;
+    String name() default "";
+    Constrains constrains() default @Constrains;
+}
+{% endhighlight %}
+
+{% highlight java %}
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface SQLInteger {
+    String name() default "";
+    Constrains constrains() default @Constrains;
+}
+{% endhighlight %}
+
+下面是一个简单的Bean定义，我们应用了以上这些注解：
+
+{% highlight java %}
+@DBTable(name = "Member")
+public class Member {
+    @SQLString(30)
+    String firstName;
+    @SQLString(50)
+    String lastName;
+    @SQLInteger
+    Integer age;
+    @SQLString(value = 30, constrains = @Constrains(primaryKey = true))
+    String handle;
+    static int memberCount;
+}
+{% endhighlight %}
+
+类的注解`@DBTable`的元素值`Member`将会用来作为表的名字。Bean的属性`firstName`和`lastName`都被注解为`@SQLString`类型，并且其元素值分别为30和50。这些注解有两个有趣的地方：第一，它们都使用了嵌入的`@Constrains`注解的默认值；第二，它们都使用了快捷方式。何为快捷方式呢？如果注解中定义了名为`value`的元素，并且在使用该注解的时候，如果该元素是唯一一个需要赋值的元素，那么此时无需使用key-value的写法，而只需在括号内给出`value`元素的值即可。
+
+### 注解不支持继承
+
+不能使用关键字extends来继承某个@interface
+
+### 实现注解处理器（了解）
+
+下面是一个注解处理器的例子，它将读取一个类文件，检查其上的注解，并生成SQL命令：
+
+{% highlight java %}
+public class TableCreater {
+
+    public static void main(String[] args) throws Exception {
+
+        createSQL(new String[]{"com.example.kevindai.annotation.db.Member"});
+    }
+
+    private static void createSQL(String[] classnames) throws Exception {
+
+        for (String classname : classnames) {
+            Class<?> cl = Class.forName(classname);
+            DBTable dbTable = cl.getAnnotation(DBTable.class);
+            if (dbTable == null) {
+                System.out.println("No DBTable annotations in class " + classname);
+                continue;
+            }
+            String tableName = dbTable.name();
+            // If the tableName is empty use the class name.
+            if (tableName.length() < 1)
+                tableName = cl.getSimpleName();
+            List<String> columnDefs = new ArrayList<>();
+            for (Field field : cl.getDeclaredFields()) {
+                Annotation[] anns = field.getDeclaredAnnotations();
+                if (anns.length < 1)
+                    continue;// Not a db table column
+                if (anns[0] instanceof SQLInteger) {
+                    SQLInteger sInt = (SQLInteger) anns[0];
+                    String columnName;
+                    // Use field name if name not specified
+                    if (sInt.name().length() < 1)
+                        columnName = field.getName();
+                    else
+                        columnName = sInt.name();
+                    columnDefs.add(columnName + " INT" + getConstrains(sInt.constrains()));
+                }
+                if (anns[0] instanceof SQLString) {
+                    SQLString sString = (SQLString) anns[0];
+                    String columnName;
+                    // use field name if name not specified
+                    if (sString.name().length() < 1)
+                        columnName = field.getName();
+                    else
+                        columnName = sString.name();
+                    columnDefs.add(columnName + " VARCHAR(" + sString.value() + ")" + getConstrains(sString.constrains()));
+                }
+            }
+            StringBuilder createCommand = new StringBuilder("CREATE TABLE " + tableName + "(");
+            for (String columnDef : columnDefs)
+                createCommand.append("\n    ").append(columnDef).append(",");
+            // Remove trailing comma
+            String tableCreate = createCommand.substring(0, createCommand.length() - 1) + ");";
+            System.out.println(tableCreate);
+        }
+    }
+
+    private static String getConstrains(Constrains con) {
+
+        String constrains = "";
+        if (!con.allowNull())
+            constrains += " NOT NULL";
+        if (con.primaryKey())
+            constrains += " PRIMARY KEY";
+        if (con.unique())
+            constrains += " UNIQUE";
+        return constrains;
+    }
+
+}
+{% endhighlight %}
+
+```
+CREATE TABLE Member(
+    firstName VARCHAR(30),
+    lastName VARCHAR(50),
+    age INT,
+    handle VARCHAR(30) PRIMARY KEY);
 ```
