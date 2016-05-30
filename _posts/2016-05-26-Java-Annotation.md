@@ -318,4 +318,3 @@ CREATE TABLE Member(
     age INT,
     handle VARCHAR(30) PRIMARY KEY);
 ```
-## 使用apt处理注解
