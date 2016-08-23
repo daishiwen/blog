@@ -4,9 +4,10 @@ category: 技术
 tags: [Java]
 title: Java注解（Annotation）
 header: no
+show: true
 ---
 
-之前对注解的认识，只是局限在`@Override` `@Deprecated` `@SuppressWarnings`，好处也只是知道使用注解可以有更加干净易读的代码、可以在编译期进行类型检查，其他的知之甚少。但随着目前新技术的蓬勃发展，各种新技术、新框架涌现了出来，其中好多会用到注解，目前知道的有`Dragger2` `EventBus3` `Retrofit` `ActiveAndroid`等等。如果不深入了解注解的相关知识，可能在学习这些新东西时徒增一些困惑。所以接下来，我会由浅入深地带你走进注解的殿堂，一起学习，一起探索。
+之前对注解的认识，只是局限在`@Override` `@Deprecated` `@SuppressWarnings`，好处也只是知道使用注解可以有更加干净易读的代码、可以在编译期进行类型检查，其他的知之甚少。但随着目前新技术的蓬勃发展，各种新技术、新框架涌现了出来，其中好多会用到注解，目前知道的有`Dagger2` `EventBus3` `Retrofit` `ActiveAndroid`等等。如果不深入了解注解的相关知识，可能在学习这些新东西时徒增一些困惑。所以接下来，我会由浅入深地带你走进注解的殿堂，一起学习，一起探索。
 
 ## 基本用法
 

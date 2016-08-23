@@ -4,6 +4,7 @@ category: 阿西巴
 tags: [日记]
 title: 博客的待办事项
 header: no
+show: true
 ---
 
 > 周日晚上写于沙发

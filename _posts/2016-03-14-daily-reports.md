@@ -4,6 +4,7 @@ category: 阿西巴
 tags: [日记]
 title: 白色情人节
 header: no
+show: true
 ---
 
 今天是2016年3月14日，白色情人节。

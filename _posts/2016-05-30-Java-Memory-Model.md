@@ -4,6 +4,7 @@ category: 技术
 tags: [Java]
 title: Java内存模型（Java Memory Model）
 header: no
+show: true
 ---
 
 Java虚拟机规范试图定义一种Java内存模型（Java Memory Model）来屏蔽各种硬件和操作系统的内存访问差异，以实现让Java程序在各个平台下都能达到一致的内存访问效果。定义Java内存模型并非一件容易的事情，必须定义得足够严谨，才能让Java的并发内存访问不会产生歧义；同样，也必须足够宽松，使得虚拟机的实现有足够的自由空间去利用硬件的各种特性来获取更好的执行速度。经过长时间的验证和修补，在JDK1.5发布后，Java内存模型趋于成熟，这个版本在目前的JDK1.8中仍在使用。

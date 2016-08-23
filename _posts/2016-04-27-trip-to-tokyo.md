@@ -4,6 +4,7 @@ category: 旅行
 tags: [东京]
 title: Lost in Tokyo「迷失东京」
 header: no
+show: true
 ---
 
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/trip_tokyo_night_view4.jpg)</a>

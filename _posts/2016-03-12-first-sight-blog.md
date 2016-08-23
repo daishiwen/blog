@@ -5,6 +5,7 @@ tags: [日记]
 title: 吾家博客初长成
 description: 用Github Pages + Jekyll搭建博客
 header: no
+show: true
 ---
 
 <a href="#" data-reveal-id="videoModal">![](../images/21-041223_215.jpg)</a>

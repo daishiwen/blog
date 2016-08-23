@@ -44,6 +44,10 @@
 
       li {
         display: inline;
+		a:hover {
+	    //   color: $primary-accent-color;
+		  text-decoration: underline;
+	    }
       }
     }
   }

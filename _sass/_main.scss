@@ -263,7 +263,7 @@ doublequote:before, .stressed-quote:before {
 .site-abstract > .abstract > * {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
-  line-height: 1.5 !important;
+  // line-height: 1.5 !important;
   font-size: 0.9rem;
   color: #778;
 }
@@ -279,6 +279,7 @@ doublequote:before, .stressed-quote:before {
   border-bottom: none;
   &:hover {
     color: $primary-accent-color;
+	text-decoration: underline;
   }
 }
 
