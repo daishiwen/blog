@@ -7,7 +7,7 @@ description: 用Github Pages + Jekyll搭建博客
 header: no
 ---
 
-<a href="#" data-reveal-id="videoModal">![](http://img.name2012.com/uploads/allimg/2015-04/21-041223_215.jpg)</a>
+<a href="#" data-reveal-id="videoModal">![](../images/21-041223_215.jpg)</a>
 
 终于有自己的博客了
 

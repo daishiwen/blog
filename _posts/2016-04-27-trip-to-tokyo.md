@@ -16,13 +16,13 @@ header: no
 
 好吧，具体情节我已经忘了，只记得讲的是一个老男人和一个年轻女人的故事。
 
-男主角—过气电视明星鲍勃·哈里斯（比尔·默瑞 Bill Murray 饰）<br/>
+男主角—过气电视明星鲍勃·哈里斯（比尔·默瑞 Bill Murray 饰）  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/p2212681619.jpg)</a>
 
-女主角—已为人妻的夏洛特（斯嘉丽·约翰逊 Scarlett Johansson 饰）<br/>
+女主角—已为人妻的夏洛特（斯嘉丽·约翰逊 Scarlett Johansson 饰）  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/p2152618469.jpg)</a>
 
-结尾一幕，I love you, just like honey...<br/>
+结尾一幕，I love you, just like honey...  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/p492722246.jpg)</a>
 
 日本不是第一次去了，之前去过一次冲绳。冲绳给人的感觉是：嗯，这里是日本；嗯？这里是日本吗？
@@ -43,19 +43,19 @@ header: no
 > 在东京的第一餐吃的拉面，人民币50左右，味道还可以
 >
 
-歌舞伎町一番街<br/>
+歌舞伎町一番街  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/trip_tokyo_night_view3.jpg)</a>
 
-歌舞伎町<br/>
+歌舞伎町  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/trip_tokyo_night_view2.jpg)</a>
 
-车水马龙<br/>
+车水马龙  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/trip_tokyo_night_view1.jpg)</a>
 
-深夜食堂<br/>
+深夜食堂  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/trip_tokyo_night_view5.jpg)</a>
 
-东京塔 Tokyo Tower<br/>
+东京塔 Tokyo Tower  
 <a href="#" data-reveal-id="videoModal">![]({{site.url}}/images/trip_tokyo_tower2.jpg)</a>
 
 ## 写在最后

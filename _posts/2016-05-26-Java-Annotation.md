@@ -85,21 +85,21 @@ Java目前只内置了三种标准注解，以及四中元注解。元注解专�
 > ---
 > `@Target` 表示该注解可以用于什么地方。
 >
-> `CONSTRUCTOR` 构造器的声明<br>
-> `FIELD` 域声明（包括enum实例）<br>
-> `LOCAL_VARIABLE` 局部变量声明<br>
-> `METHOD` 方法声明<br>
-> `PACKAGE` 包声明<br>
-> `PARAMETER` 参数声明<br>
+> `CONSTRUCTOR` 构造器的声明  
+> `FIELD` 域声明（包括enum实例）  
+> `LOCAL_VARIABLE` 局部变量声明  
+> `METHOD` 方法声明  
+> `PACKAGE` 包声明  
+> `PARAMETER` 参数声明  
 > `TYPE` 类、接口（包括注解类型）或enum声明
 >
 > ---
 >
 > `@Retention` 表示需要在什么级别保存该注解信息。
 >
-> `SOURCE` 注解将被编译器丢弃<br>
-> `CLASS` 注解在class文件中可用，但会被VM丢弃。<br>
-> `RUNTIME` VM将在运行期也保留注解，因此可以通过反射机制读取注解的信息。<br>
+> `SOURCE` 注解将被编译器丢弃  
+> `CLASS` 注解在class文件中可用，但会被VM丢弃。  
+> `RUNTIME` VM将在运行期也保留注解，因此可以通过反射机制读取注解的信息。  
 >
 > ---
 >
@@ -153,12 +153,12 @@ Warning: Missing use case-50
 
 注解元素可用的类型如下所示：
 
-> 所有基本类型（int、float、boolean等）<br>
-> String<br>
-> Class<br>
-> enum<br>
-> Annotation<br>
-> 以上类型的数组<br>
+> 所有基本类型（int、float、boolean等）  
+> String  
+> Class  
+> enum  
+> Annotation  
+> 以上类型的数组  
 
 如果你使用了其他类型，那么编译器就会报错。注解也可以作为元素的类型，也就是说注解可以嵌套，这是一个很有用的技巧。
 
