@@ -139,6 +139,13 @@
         font-size: 1em;
       }
 
+	  a {
+		  color: #777;
+		  &:hover {
+			  color: $primary-accent-color;
+		  }
+	  }
+
       p {
         margin-top: 0;
         margin-bottom: 25px;
