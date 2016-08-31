@@ -27,6 +27,7 @@ github_username: daishiwen
 # Build settings
 markdown: kramdown
 highlighter: pygments
+# excerpt_separator: ""
 
 sass:
     style: :compressed
