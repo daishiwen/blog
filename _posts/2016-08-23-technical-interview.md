@@ -77,6 +77,7 @@ show: true
 		> A: onSaveInstanceState onStop
 
 	2. 从B返回A
+
 		> B: onPause  
 		> A: onRestart onStart onResume  
 		> B: onStop onDestroy
