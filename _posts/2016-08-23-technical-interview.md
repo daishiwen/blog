@@ -119,31 +119,38 @@ show: true
 		> Binder  
 		> Bundle与Messenger
 
-	9. IntentService
-	10. Handler、AsyncTask、Thread、HandlerThread、ThreadLocal
+	9.  LruCache的原理及Lru算法
+	10. IntentService
+	11. Handler、AsyncTask、Thread、HandlerThread、ThreadLocal
 
 		> ***HandlerThread:*** HandlerThread自带Looper使它可以通过消息机制重复使用线程，节省开支。  [示例](./HandlerThread-Sample)
 
-	11. 开源组件
+	12. 开源组件（熟练使用+熟悉原理）
 
 		> RxJava、RxAndroid  
-		> Retrofit、OkHttp  
+		> Retrofit、OkHttp、Volley  
 		> Fresco、Glide、Picasso  
 		> Dagger2  
 		> EventBus3  
+		>
+		> Okio（了解）  
+		> LeakCanary（会用）
 
-	12. 架构
+	13. 架构
 
 		> MVC  
 		> MVP  
 		> MVVM  
 		> Clean Architecture
 
-	13. 开源项目
+	14. 开源项目
 
 		> [android-architecture](https://github.com/googlesamples/android-architecture)  
 		> [android-boilerplate](https://github.com/hitherejoe/Android-Boilerplate)  
 		> [Android-CleanArchitecture](https://github.com/android10/Android-CleanArchitecture)  
 		> [GithubClient](https://github.com/frogermcs/GithubClient)
+
+	15. Android Studio、Gradle相关
+	16. Git相关
 
 持续更新...
