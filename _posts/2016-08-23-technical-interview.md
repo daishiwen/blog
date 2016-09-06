@@ -153,4 +153,35 @@ show: true
 	15. Android Studio、Gradle相关
 	16. Git相关
 
+		> 新建一个分支test（git branch -b test）  
+		> 在test分支上修改后，提交这些修改（git add .）（git commit -m "changeLog"）  
+		> 把test分支合并到develop分支上  
+		> 推送develop到远程服务器  
+		> 更新本地develop分支
+
+	17. 各个插值器（Interpolator）的算法实现
+
+		> AccelerateInterpolator  
+		> DecelerateInterpolator  
+		> AccelerateDecelerateInterpolator  
+		> LinearInterpolator  
+		> BounceInterpolator  
+		> PathInterpolator  
+		> CycleInterpolator
+
+	18. 四种launchMode的用法和不同之处
+
+		> `singleInstance` 这种启动模式比较特殊，因为它会启动一个新的栈结构，将Activity放在这个新的栈结构中，并保证不会有其他Activity实例进入。  
+		> `singleTask` 如果在栈中有对应的Activity实例，则此Activity实例以上的其他Activity实例统统出栈，使此Activity实例成为栈顶实例。  
+		> `singleTop` 在栈中如果发现有对应的Activity实例正位于栈顶，则重复利用，不再生成新的实例。  
+		> `standard` 是默认的启动模式，不管栈中有没有已存在的实例，都生成一个新的，放在栈的顶部。
+
+	19. 动画
+
+		> 补间动画  
+		> 帧动画  
+		> 属性动画
+
+	20. ImageView中src和background的区别
+
 持续更新...
