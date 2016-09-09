@@ -2,7 +2,7 @@
 layout: post
 category: 技术
 tags: [Java, Android, 面试]
-title: 技术面试（Android方向）
+title: 技术点（Android）
 header: no
 show: true
 ---
