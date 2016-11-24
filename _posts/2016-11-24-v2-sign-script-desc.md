@@ -161,3 +161,8 @@ signed: QyerApp/python/outputs_apk/QyerApp-360m-release_7.1.0.apk
 signed: QyerApp/python/outputs_apk/QyerApp-xiaomi-release_7.1.0.apk
 ......
 ```
+
+* 源文件   
+[channels.properties](http://git.2b6.me/mobile/qyer_app_android/blob/develop/channels.properties)  
+[build.sh](http://git.2b6.me/mobile/qyer_app_android/blob/develop/build.sh)  
+[QyerApp/python/build.py](http://git.2b6.me/mobile/qyer_app_android/blob/develop/QyerApp/python/build.py)
