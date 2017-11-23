@@ -107,10 +107,19 @@ show: true
 		> `ViewGroup`  
 		> ***dispatchTouchEvent:*** 用来进行事件分发，无论ViewGroup还是View的事件都是从这个方法开始的。  
 		> ***onInterceptTouchEvent:*** 在onInterceptTouchEvent中调用，表示是否拦截当前事件，返回true表示拦截，将不会把事件分发给子View。  
-		> ***onTouchEvent:*** 在onInterceptTouchEvent中调用，如果返回true表示消费当前事件，false表示不消耗当前事件。  
+		> ***onTouchEvent:*** 在onInterceptTouchEvent中调用，如果返回true表示消费当前事件，false表示不消费当前事件。  
 		> `View`  
 		> ***dispatchTouchEvent***  
 		> ***onTouchEvent***
+		>
+		> ---
+		>
+		> Activity、ViewGroup、View（都不消费touch事件的情况）  
+		> 按下：  
+		> Activity: dispatchTouchEvent -> ViewGroup: dispatchTouchEvent -> ViewGroup: onInterceptTouchEvent -> View: dispatchTouchEvent -> View: onTouchEvent -> ViewGroup: onTouchEvent -> Activity: onTouchEvent  
+		> 抬起：  
+		> Activity: dispatchTouchEvent -> Activity: onTouchEvent
+
 
 	8. IPC机制(Inter-Process Communication)  <small>[(参考一)](http://www.jianshu.com/p/3f6932db9963)</small>  <small>[(参考二)](http://www.jianshu.com/p/b9b15252b3d6)</small>  <small>[(参考三)](http://www.jianshu.com/p/b96713fc4e5e)</small>  <small>[(参考四)](http://www.jianshu.com/p/6e23037d6d20)</small>
 
